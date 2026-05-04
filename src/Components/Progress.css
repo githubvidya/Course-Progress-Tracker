@@ -1,0 +1,180 @@
+/* CourseProgressTracker.css */
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f8f9ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.container h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 32px;
+  background-color: #e5e7eb;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #22c55e);
+  color: white;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  transition: width 0.4s ease;
+}
+
+.summary {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.add-module {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.add-module input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.add-module input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+.add-module button,
+.reset-btn,
+.delete-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.add-module button {
+  padding: 14px 22px;
+  background: #4caf50;
+  color: white;
+}
+
+.add-module button:hover {
+  background: #43a047;
+  transform: translateY(-2px);
+}
+
+.actions {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.reset-btn {
+  padding: 12px 24px;
+  background: #f59e0b;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #d97706;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.module-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.module-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.module-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #4caf50;
+}
+
+.module-title {
+  margin-left: 15px;
+  font-size: 17px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete-btn {
+  padding: 10px 16px;
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .add-module {
+    flex-direction: column;
+  }
+
+  .module-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
